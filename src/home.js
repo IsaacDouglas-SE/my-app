@@ -17,10 +17,36 @@ UpdatePlayer() {
 
     }
 async CreatePlayer() {
-  			var Ref1=document.getElementById("Regno");
-  			var Ref2=document.getElementById("N");
-        await fetch()
+  			var Playername=document.getElementById("playername").value;
+  			var Position=document.getElementById("position").value;
+        var Rating=document.getElementById("rating").value;
+        var Price=document.getElementById("price").value;
+        var League=document.getElementById("league").value;
+        var Club=document.getElementById("club").value;
+        var Nationality=document.getElementById("nationality").value;
+        var Quality=document.getElementById("quality").value;
+
+        var playerlist = {
+          playername: Playername,
+          position: Position,
+          rating:Rating,
+          price:Price,
+          league:League,
+          club:Club,
+          nationality:Nationality,
+          quality:Quality
+        };
+        console.log(playerlist)
+    await fetch('/CreatePlayer',{
+      method:'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(playerlist)
+    })
   }
+
 DeletePlayer() {
   fetch("/DeletePlayer")
 }
@@ -49,7 +75,7 @@ render() {
           <button class="button" onClick={() => this.myFunc2()}>Single Player</button>
         <p>-</p>
         </div>
-<button className="buttons">Select Squad</button><button className="button1">Save Squad</button>  <button className="buttons">Update player</button><button className="button2">Delete player</button><button className="button1">Create player</button>
+  <button className="buttons">Update player</button>  <button className="button2">Delete player</button>  <button class="button1" onClick={() => this.CreatePlayer()}>Create Player</button>
         <table className="table">
           <tr>
                 <th>Playername</th>
@@ -65,7 +91,7 @@ render() {
                 <td>Isaac Douglas</td>
                 <td>LWB</td>
                 <td>99</td>
-                <td>20</td>
+                <td>20000</td>
                 <td>Series A</td>
                 <td>Napoli</td>
                 <td>England</td>
@@ -106,82 +132,112 @@ render() {
   <div class="dropdown">
   <button class="dropbtn">ST</button>
   <div class="dropdown-content">
-  <a option="">Isaac Douglas</a>
-  <a option="">Dries Mertens</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">ST1</option>
+       <option value="GK2">ST2</option>
+       <option value="GK3">ST3</option>
+     </select>
   </div>
 </div>
   <div><div class="dropdown">
   <button class="dropbtn">ST</button>
   <div class="dropdown-content">
-  <a option="">Dries Mertens</a>
-  <a option="">Isaac Douglas</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">ST1</option>
+       <option value="GK2">ST2</option>
+       <option value="GK3">ST3</option>
+     </select>
   </div>
 </div></div>
   <div></div>
   <div><div class="dropdown">
   <button class="dropbtn">LM</button>
   <div class="dropdown-content">
-  <a option="">Link 1</a>
-  <a option="">Link 2</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">LM1</option>
+       <option value="GK2">LM2</option>
+       <option value="GK3">LM3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">CM</button>
   <div class="dropdown-content">
-  <a option="">Lorenzo Insigne</a>
-  <a option="">Allan</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">CM1</option>
+       <option value="GK2">CM2</option>
+       <option value="GK3">CM3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">CM</button>
   <div class="dropdown-content">
-  <a option="">Allan</a>
-  <a option="">Lorenzo Insigne</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">CM1</option>
+       <option value="GK2">CM2</option>
+       <option value="GK3">CM3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">RM</button>
   <div class="dropdown-content">
-  <a option="">José Callejón</a>
-  <a option="">Link 2</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">RM1</option>
+       <option value="GK2">RM2</option>
+       <option value="GK3">RM3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">LB</button>
   <div class="dropdown-content">
-  <a option="">Link 1</a>
-  <a option="">Link 2</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">LB1</option>
+       <option value="GK2">LB2</option>
+       <option value="GK3">LB3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">CB</button>
   <div class="dropdown-content">
-  <a option="">Link 1</a>
-  <a option="">Kalidou Koulibaly</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="CB1">CB1</option>
+       <option value="CB2">CB2</option>
+       <option value="CB3">CB3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">CB</button>
   <div class="dropdown-content">
-  <a option="">Kalidou Koulibaly</a>
-  <a option="">Link 2</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="CB1">CB1</option>
+       <option value="CB2">CB2</option>
+       <option value="CB3">CB3</option>
+     </select>
   </div>
 </div></div>
   <div><div class="dropdown">
   <button class="dropbtn">RB</button>
   <div class="dropdown-content">
-  <a option="">Link 1</a>
-  <a option="">Link 2</a>
-  <a option="">Link 3</a>
+  <label for="player"></label>
+     <select id="player" name="player">
+       <option value="GK1">RB1</option>
+       <option value="GK2">RB2</option>
+       <option value="GK3">RB3</option>
+     </select>
   </div>
 </div></div>
 </div>
@@ -197,18 +253,27 @@ render() {
   </div>
 </div></div>
 
-<div>-></div>
-<div>-></div>
-<div>-></div>
-<div>-></div>
-<div>-></div>
-<div>-></div>
-<div>-></div>
+<div>-</div>
+<div>-</div>
+
 <div>
-          <form action="Process" method="Post" onSubmit ="return checkValues()">
-	Regno:<input type="text" id="Regno" Name="Regno1"/>
-	Name:<input type="text" id="N" Name="sname"/>
-	<input type="submit"/>
+  <form onSubmit ="return checkValues()">
+  	Playername:<input type="text" id="playername" Name="playername"/>
+    <p>-</p>
+  	Position:<input type="text" id="position" Name="position"/>
+    <p>-</p>
+  	League:<input type="text" id="league" Name="league"/>
+    <p>-</p>
+  	Club:<input type="text" id="club" Name="club"/>
+    <p>-</p>
+  	Nationality:<input type="text" id="nationality" Name="nationality"/>
+    <p>-</p>
+  	Quality:<input type="text" id="quality" Name="quality"/>
+    <p>-</p>
+  	Rating:<input type="text" id="rating" Name="rating"/>
+    <p>-</p>
+  	Price:<input type="text" id="price" Name="price"/>
+
 </form>
   </div>
           </div>
