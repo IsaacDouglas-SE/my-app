@@ -13,9 +13,36 @@ export class Home extends React.Component {
 
   }
 
-UpdatePlayer() {
+async UpdatePlayer() {
+  var Playername=document.getElementById("playername").value;
+  var Position=document.getElementById("position").value;
+  var Rating=document.getElementById("rating").value;
+  var Price=document.getElementById("price").value;
+  var League=document.getElementById("league").value;
+  var Club=document.getElementById("club").value;
+  var Nationality=document.getElementById("nationality").value;
+  var Quality=document.getElementById("quality").value;
 
-    }
+  var playerlist1 = {
+    playername: Playername,
+    position: Position,
+    rating:Rating,
+    price:Price,
+    league:League,
+    club:Club,
+    nationality:Nationality,
+    quality:Quality
+  };
+  console.log(playerlist1)
+await fetch(`/UpdatePlayer/${Playername}`,{
+method:'PUT',
+headers: {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify(playerlist1)
+})
+}
 async CreatePlayer() {
   			var Playername=document.getElementById("playername").value;
   			var Position=document.getElementById("position").value;
@@ -47,9 +74,16 @@ async CreatePlayer() {
     })
   }
 
-DeletePlayer() {
-  fetch("/DeletePlayer")
+async DeletePlayer() {
+  var Playername=document.getElementById("playername").value;
+  var deleteMe = { playername:Playername,
+  };
+  await fetch(`/deleteByPlayername/${Playername}`,{
+  method:'DELETE',
+
+})
 }
+
 async myFunc() {
 
   fetch("/ShowAll")
@@ -66,16 +100,17 @@ async myFunc() {
 }
 render() {
 
+
+
   let playerlist = this.state.firstState;
     return (
       <div>
         <h1 className="Banner">FIFA 20 Ultimate Team Squad Builder</h1>
         <div>
-          <button class="button" onClick={() => this.myFunc()}>Load Players</button>
-          <button class="button" onClick={() => this.myFunc2()}>Single Player</button>
+          <button class="button" onClick={() => this.myFunc()}>Click Here To Load Players</button>
         <p>-</p>
         </div>
-  <button className="buttons">Update player</button>  <button className="button2">Delete player</button>  <button class="button1" onClick={() => this.CreatePlayer()}>Create Player</button>
+  <button className="buttons"onClick={() => this.UpdatePlayer()}>Update player</button>  <button className="button2" onClick={() => this.DeletePlayer()}>Delete player</button>
         <table className="table">
           <tr>
                 <th>Playername</th>
@@ -88,30 +123,21 @@ render() {
                 <th>Quality</th>
               </tr>
               <tr>
-                <td>Isaac Douglas</td>
-                <td>LWB</td>
-                <td>99</td>
-                <td>20000</td>
-                <td>Series A</td>
-                <td>Napoli</td>
-                <td>England</td>
-                <td>Special</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
-              <tr>
-                <td>Kalidou Koulibaly</td>
-                <td>CB</td>
-                <td>89</td>
-                <td>59000</td>
-                <td>Series A</td>
-                <td>Napoli</td>
-                <td>Senegal</td>
-                <td>Gold</td>
-              </tr>
+
 </table>
 
             {playerlist
               .map(player => (
-                <table className="table">
+                <table className="tableimport">
                 <tr>
                 <td>{player.playername}</td>
                 <td>{player.position}</td>
@@ -132,22 +158,22 @@ render() {
   <div class="dropdown">
   <button class="dropbtn">ST</button>
   <div class="dropdown-content">
-  <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">ST1</option>
-       <option value="GK2">ST2</option>
-       <option value="GK3">ST3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div>
   <div><div class="dropdown">
   <button class="dropbtn">ST</button>
   <div class="dropdown-content">
-  <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">ST1</option>
-       <option value="GK2">ST2</option>
-       <option value="GK3">ST3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -157,9 +183,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">LM1</option>
-       <option value="GK2">LM2</option>
-       <option value="GK3">LM3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -168,9 +195,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">CM1</option>
-       <option value="GK2">CM2</option>
-       <option value="GK3">CM3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -179,9 +207,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">CM1</option>
-       <option value="GK2">CM2</option>
-       <option value="GK3">CM3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -190,9 +219,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">RM1</option>
-       <option value="GK2">RM2</option>
-       <option value="GK3">RM3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -201,9 +231,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">LB1</option>
-       <option value="GK2">LB2</option>
-       <option value="GK3">LB3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -212,9 +243,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="CB1">CB1</option>
-       <option value="CB2">CB2</option>
-       <option value="CB3">CB3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -223,9 +255,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="CB1">CB1</option>
-       <option value="CB2">CB2</option>
-       <option value="CB3">CB3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -234,9 +267,10 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">RB1</option>
-       <option value="GK2">RB2</option>
-       <option value="GK3">RB3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
@@ -246,36 +280,38 @@ render() {
   <div class="dropdown-content">
   <label for="player"></label>
      <select id="player" name="player">
-       <option value="GK1">GK1</option>
-       <option value="GK2">GK2</option>
-       <option value="GK3">GK3</option>
+     {playerlist
+       .map(player => (
+       <option value="GK1">{player.playername}</option>
+     ))}
      </select>
   </div>
 </div></div>
 
 <div>-</div>
+<span className="space"> Add a new player below </span>
 <div>-</div>
-
-<div>
+<div className="formcss">
   <form onSubmit ="return checkValues()">
-  	Playername:<input type="text" id="playername" Name="playername"/>
+  	Playername:<input className="input" type="text" id="playername" name="playername"/>
     <p>-</p>
-  	Position:<input type="text" id="position" Name="position"/>
+  	Position:<input type="text" id="position" name="position"/>
     <p>-</p>
-  	League:<input type="text" id="league" Name="league"/>
+  	League:<input type="text" id="league" name="league"/>
     <p>-</p>
-  	Club:<input type="text" id="club" Name="club"/>
+  	Club:<input type="text" id="club" name="club"/>
     <p>-</p>
-  	Nationality:<input type="text" id="nationality" Name="nationality"/>
+  	Nationality:<input type="text" id="nationality" name="nationality"/>
     <p>-</p>
-  	Quality:<input type="text" id="quality" Name="quality"/>
+  	Quality:<input type="text" id="quality" name="quality"/>
     <p>-</p>
-  	Rating:<input type="text" id="rating" Name="rating"/>
+  	Rating:<input type="text" id="rating" name="rating"/>
     <p>-</p>
-  	Price:<input type="text" id="price" Name="price"/>
-
+  	Price:<input type="text" id="price" name="price"/>
 </form>
   </div>
+    <button class="button" onClick={() => this.CreatePlayer()}>Create Player</button>
+    <p>-</p>
           </div>
 
        );

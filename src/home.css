@@ -27,12 +27,12 @@
 }
 .Banner {
     color:green;
-      box-shadow: 10px 10px;
+    box-shadow: 10px 10px;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 97%;
     border: 1px solid black;
-    text-align: left;
+    text-align: center;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -108,7 +108,7 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 50px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -143,4 +143,51 @@
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.formcss {
+  color:white;
+  column-count: 2;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+  text-align: center;
+  box-shadow: 10px 10px;
+  background-color: #4CAF50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.input{
+  background-color:red
+}
+.tableimport {
+  color:navy;
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: left;
+  border-collapse: collapse;
+  font-family: arial, sans-serif;
+  font-size:11px;
+  grid-template-columns: AUTO;
+}
+td{
+  width:85px
+}
+.space{
+  color:green;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  width: 98%;
+      box-shadow: 5px 5px;
 }
