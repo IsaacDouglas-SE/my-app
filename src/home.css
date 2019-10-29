@@ -1,8 +1,24 @@
 
 .buttons{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+.buttons:hover {background-color: navy}
 
-  color:white;
-  background-color:blue;
+.buttons:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .button1{
 
@@ -10,10 +26,26 @@
   background-color:green;
 }
 .button2{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 9px 9px #999;
+  }
+  .button2:hover {background-color: DarkRed }
 
-  color:white;
-  background-color:Red;
-}
+  .button2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
 
 .table {
   color:navy;
@@ -25,17 +57,8 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.Banner {
-    color:green;
-    box-shadow: 10px 10px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 97%;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
+
+
 .grid-container {
   color:GREEN;
   display: grid;
@@ -134,7 +157,7 @@
   background-color: #4CAF50;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 9px #999;
+  box-shadow: 9px 9px #999;
 }
 
 .button:hover {background-color: #3e8e41}
@@ -162,7 +185,8 @@
   box-sizing: border-box;
 }
 .input{
-  background-color:red
+  background-color:red;
+  color:white;
 }
 .tableimport {
   color:navy;
@@ -190,4 +214,16 @@ td{
   background-color: white;
   width: 98%;
       box-shadow: 5px 5px;
+}
+.Banner {
+    color:green;
+    box-shadow: 10px 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 97%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+
 }

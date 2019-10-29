@@ -107,10 +107,10 @@ render() {
       <div>
         <h1 className="Banner">FIFA 20 Ultimate Team Squad Builder</h1>
         <div>
-          <button class="button" onClick={() => this.myFunc()}>Click Here To Load Players</button>
+          <button class="button" onClick={() => this.myFunc()}>Click To Load Players</button>
         <p>-</p>
         </div>
-  <button className="buttons"onClick={() => this.UpdatePlayer()}>Update player</button>  <button className="button2" onClick={() => this.DeletePlayer()}>Delete player</button>
+
         <table className="table">
           <tr>
                 <th>Playername</th>
@@ -289,11 +289,11 @@ render() {
 </div></div>
 
 <div>-</div>
-<span className="space"> Add a new player below </span>
+<span className="space">add or remove player details below</span>
 <div>-</div>
 <div className="formcss">
   <form onSubmit ="return checkValues()">
-  	Playername:<input className="input" type="text" id="playername" name="playername"/>
+  	Playername:<input className="input" type="text" placeholder="Enter name here.." id="playername" name="playername"/>
     <p>-</p>
   	Position:<input type="text" id="position" name="position"/>
     <p>-</p>
@@ -310,7 +310,7 @@ render() {
   	Price:<input type="text" id="price" name="price"/>
 </form>
   </div>
-    <button class="button" onClick={() => this.CreatePlayer()}>Create Player</button>
+    <button class="button" onClick={() => this.CreatePlayer()}>Create player</button>  <button className="buttons"onClick={() => this.UpdatePlayer()}>Update player</button>  <button className="button2" onClick={() => this.DeletePlayer()}>Delete player</button>
     <p>-</p>
           </div>
 
