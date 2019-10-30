@@ -76,8 +76,7 @@ async CreatePlayer() {
 
 async DeletePlayer() {
   var Playername=document.getElementById("playername").value;
-  var deleteMe = { playername:Playername,
-  };
+
   await fetch(`/deleteByPlayername/${Playername}`,{
   method:'DELETE',
 
@@ -105,9 +104,13 @@ render() {
   let playerlist = this.state.firstState;
     return (
       <div>
+      <div id="section1">
+       <a href="#section2">-</a>
+       </div>
         <h1 className="Banner">FIFA 20 Ultimate Team Squad Builder</h1>
         <div>
           <button class="button" onClick={() => this.myFunc()}>Click To Load Players</button>
+
         <p>-</p>
         </div>
 
@@ -311,7 +314,48 @@ render() {
 </form>
   </div>
     <button class="button" onClick={() => this.CreatePlayer()}>Create player</button>  <button className="buttons"onClick={() => this.UpdatePlayer()}>Update player</button>  <button className="button2" onClick={() => this.DeletePlayer()}>Delete player</button>
+
+
     <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <p>-</p>
+    <h2>Presentation</h2>
+    <ol className="presentation">
+      <li>   -</li>
+      <li>   -</li>
+  <li>   kanban board Trello</li>
+  <li>   Draw.io</li>
+  <li>   GitHub</li>
+  <li>   SQL - MySql</li>
+  <li>   SpringBoot</li>
+  <li>  Java</li>
+  <li>   Javascript</li>
+  <li>   Class</li>
+  <li>   Html</li>
+  <li>   Node JS</li>
+  <li>   W3Schools/Youtube</li>
+  <li>   Trainers</li>
+  <li>Colleagues</li>
+  <li>Google</li>
+  <li>StackOverflow</li>
+  <li>   ATOM</li>
+    </ol>
+    <div class="main" id="section2">
+    <p>-</p>
+  <button className="button1"> <a href="#section1">* Reveal Application *</a></button>
+  </div>
+  <p>-</p>
+
           </div>
 
        );
