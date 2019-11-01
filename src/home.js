@@ -144,8 +144,8 @@ render() {
                 <tr>
                 <td>{player.playername}</td>
                 <td>{player.position}</td>
-                <td class="currency">{player.rating}</td>
-                <td>{player.price}</td>
+                <td>{player.rating}</td>
+                <td class="currency">{player.price}</td>
                 <td>{player.league}</td>
                 <td>{player.club}</td>
                 <td>{player.nationality}</td>
