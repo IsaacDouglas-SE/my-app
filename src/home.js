@@ -330,22 +330,7 @@ render() {
     <p>-</p>
     <p>-</p>
     <h2>Presentation</h2>
-    <ol className="presentation">
-      <li>   -</li>
-      <li>   -</li>
-  <li>  Wireframe: Draw.io </li>
-  <li> kanban board Trello  </li>
-  <li>   Version Control: GiT</li>
-  <li>   Database: MySQL</li>
-  <li> Springboot backend </li>
-  <li>   Javascript, Html, css, </li>
-  <li>   React frontend </li>
-  <li>   Node JS, Java</li>
-  <li>   W3Schools, Youtube</li>
-  <li>Cloud Server: Google Cloud Platform</li>
-  <li>Integration Tests: Selenium </li>
-  <li>   CI Server: Jenkins</li>
-    </ol>
+
     <div class="main" id="section2">
       <p>-</p>
 
