@@ -221,7 +221,7 @@ transition: all 0.3s ease 0s;
   grid-template-columns: AUTO;
 }
 td{
-  width:85px
+  width:80px
 }
 .space{
   color:green;
