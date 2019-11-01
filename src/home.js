@@ -107,7 +107,7 @@ render() {
       <div id="section1">
        <a href="#section2">-</a>
        </div>
-        <h1 className="Banner">FIFA 20 Ultimate Team Squad Builder</h1>
+        <h1 className="Banner">iFIFA 20 Ultimate Team Squad Builder</h1>
         <div>
           <button class="button" onClick={() => this.myFunc()}>Click To Load Players</button>
 
@@ -348,7 +348,7 @@ render() {
     </ol>
     <div class="main" id="section2">
       <p>-</p>
-
+    <div class="WireFrame">-</div>
   <button className="button1">  <a href = "https://trello.com/b/XxWK3r2P/online-bookstore" >Trello 1</a></button>  <button className="button1">  <a href = "https://trello.com/b/JC491Dn9/fifaapp">Trello 2</a></button>  <button className="button1">  <a href = "https://github.com/IsaacDouglas-SE">GiT</a></button>
   <p>-</p>
   <button className="button1"> <a href="#section1">* Reveal Application *</a></button>
