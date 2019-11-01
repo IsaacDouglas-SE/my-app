@@ -262,10 +262,17 @@ list-style: none;
     width: 20%;
     margin: auto;
     border-radius: 10px;
+      font-size: calc(2px + 2vmin);
 
 }
 .presentation:hover {
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     border-radius: 10px;
+  }
+  .WireFrame{
+      background-image: url("WireFrame-Balsamiq.PNG");
+      width:815px;
+      height:425px;
+
   }

@@ -5,7 +5,9 @@
 
 .App-header {
   /* background-color: #92a8d1; */
-  background-image: url("backdrop.jpg");
+  background-image: url("BD5.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat, repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

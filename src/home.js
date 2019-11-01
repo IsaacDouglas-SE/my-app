@@ -333,25 +333,24 @@ render() {
     <ol className="presentation">
       <li>   -</li>
       <li>   -</li>
-  <li>   kanban board Trello</li>
-  <li>   Draw.io</li>
-  <li>   GitHub</li>
-  <li>   SQL - MySql</li>
-  <li>   SpringBoot</li>
-  <li>  Java</li>
-  <li>   Javascript</li>
-  <li>   Class</li>
-  <li>   Html</li>
-  <li>   Node JS</li>
-  <li>   W3Schools/Youtube</li>
-  <li>   Trainers</li>
-  <li>Colleagues</li>
-  <li>Google</li>
-  <li>StackOverflow</li>
-  <li>   ATOM</li>
+  <li>  Wireframe: Draw.io </li>
+  <li> kanban board Trello  </li>
+  <li>   Version Control: GiT</li>
+  <li>   Database: MySQL</li>
+  <li> Springboot backend </li>
+  <li>   Javascript, Html, css, </li>
+  <li>   React frontend </li>
+  <li>   Node JS, Java</li>
+  <li>   W3Schools, Youtube</li>
+  <li>Cloud Server: Google Cloud Platform</li>
+  <li>Integration Tests: Selenium </li>
+  <li>   CI Server: Jenkins</li>
     </ol>
     <div class="main" id="section2">
-    <p>-</p>
+      <p>-</p>
+    <div class="WireFrame">-</div>
+  <button className="button1">  <a href = "https://trello.com/b/XxWK3r2P/online-bookstore" target="_blank">Trello 1</a></button>  <button className="button1">  <a href = "https://trello.com/b/JC491Dn9/fifaapp" target="_blank">Trello 2</a></button>  <button className="button1">  <a href = "https://github.com/IsaacDouglas-SE" target="_blank">GiT</a></button>
+  <p>-</p>
   <button className="button1"> <a href="#section1">* Reveal Application *</a></button>
   </div>
   <p>-</p>
