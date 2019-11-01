@@ -274,6 +274,7 @@ list-style: none;
       background-image: url("WireFrame-Balsamiq.PNG");
       width:730px;
       height:602px;
+      padding: 10px;
 
   }
   .currency:before{ content:'£'; }
