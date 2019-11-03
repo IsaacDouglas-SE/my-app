@@ -347,7 +347,7 @@ render() {
     <div class="main" id="section2">
       <p>-</p>
 
-  <button class="example_c">  <a href = "https://trello.com/b/XxWK3r2P/online-bookstore" >Trello 1</a></button>  <button class="example_c">  <a href = "https://trello.com/b/JC491Dn9/fifaapp">Trello 2</a></button>   <button class="example_c">  <a href = "https://balsamiq.cloud/sugokqs/plm1dl3/r2278" >Wireframe</a></button> <button class="example_c">  <a href = "https://github.com/IsaacDouglas-SE">GiT</a></button>
+  <button class="example_c">  <a href = "https://trello.com/b/XxWK3r2P/online-bookstore" >Trello 1</a></button>  <button class="example_c">  <a href = "https://trello.com/b/JC491Dn9/fifaapp">Trello 2</a></button>   <button class="example_c">  <a href = "https://prezi.com/p/a09qsrr0hflq/" >Wireframe</a></button> <button class="example_c">  <a href = "https://github.com/IsaacDouglas-SE">GiT</a></button>
   <p>-</p>
   <button className="button1"> <a href="#section1">* Reveal Application *</a></button>
   </div>
