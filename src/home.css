@@ -253,13 +253,13 @@ html {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 97%;
-list-style: none;
+    list-style: none;
     text-align: left;
     padding: 10px;
     background-image: url("notepad.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
-
+    width: 20%;
     margin: auto;
     border-radius: 10px;
       font-size: calc(2px + 2vmin);
